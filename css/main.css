@@ -2983,12 +2983,7 @@ html.no-csstransitions .home-content__main {
   }
 
 }
-
-
-/* ===================================================================
- * # works
- *
- * ------------------------------------------------------------------- */
+/* s-works (sin cambios, solo para contexto) */
 .s-works {
   padding-top: 18rem;
   padding-bottom: 18rem;
@@ -2998,7 +2993,7 @@ html.no-csstransitions .home-content__main {
 .s-works::before {
   content: "";
   display: block;
-  content: "";
+  /* content: ""; */ /* Duplicado, eliminado */
   position: absolute;
   top: 0;
   left: 50%;
@@ -3012,21 +3007,14 @@ html.no-csstransitions .home-content__main {
   background-size: 760px 380px;
 }
 
-/* ------------------------------------------------------------------- 
- * ## bricks/masonry
- * ------------------------------------------------------------------- */
+/* bricks/masonry (sin cambios, solo para contexto) */
 .masonry-wrap {
   margin-top: 7.2rem;
   max-width: 1100px;
   position: relative;
 }
 
-.masonry-wrap:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
+.masonry-wrap:after,
 .masonry:after {
   content: "";
   display: table;
@@ -3045,7 +3033,7 @@ html.no-csstransitions .home-content__main {
 
 .item-folio {
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Mantenemos hidden para que el caption no se salga si es más grande antes de aplicar overflow-y */
 }
 
 .item-folio__thumb img {
@@ -3060,7 +3048,7 @@ html.no-csstransitions .home-content__main {
 
 .item-folio__thumb a::before {
   display: block;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0); /* Mantenemos este overlay ligero para la imagen */
   content: "";
   opacity: 0;
   visibility: hidden;
@@ -3071,9 +3059,10 @@ html.no-csstransitions .home-content__main {
   height: 100%;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  z-index: 1;
+  z-index: 1; /* Por debajo del texto y caption */
 }
 
+/* El ícono "..." puede seguir apareciendo si lo deseas, o puedes ocultarlo en hover si el caption lo reemplaza */
 .item-folio__thumb a::after {
   content: "...";
   font-family: georgia, serif;
@@ -3096,48 +3085,84 @@ html.no-csstransitions .home-content__main {
   -webkit-transform: scale(0.5);
   -ms-transform: scale(0.5);
   transform: scale(0.5);
-  z-index: 1;
+  z-index: 1; /* Por debajo del texto y caption */
 }
 
+/* ---- MODIFICACIONES AQUÍ ---- */
 .item-folio__text {
   position: absolute;
   left: 0;
-  bottom: 3.6rem;
-  padding: 0 3.3rem;
+  bottom: 4.5rem; /* Ligeramente más arriba para acomodar texto más grande si es necesario */
+  width: 100%;
+  padding: 0 2rem; /* Reducimos padding horizontal si el texto es más grande y centrado */
+  box-sizing: border-box;
   z-index: 2;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translate3d(0, 100%, 0);
-  -ms-transform: translate3d(0, 100%, 0);
-  transform: translate3d(0, 100%, 0);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  text-align: center; /* <<< CENTRADO HORIZONTAL DEL CONTENIDO */
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+  background-color: #0d404781;
 }
+
 
 .item-folio__title {
   font-family: "Nunito Sans", sans-serif;
-  font-size: 1.4rem;
+  font-size: 2rem; /* <<< AUMENTADO (antes 1.4rem) */
   font-weight: 700;
-  line-height: 1.286;
+  line-height: 1.3; /* <<< AJUSTADO (antes 1.286) */
   color: #FFFFFF;
   text-transform: uppercase;
   letter-spacing: .2rem;
-  margin: 0 0 .3rem 0;
+  margin: 0 0 .5rem 0; /* Un poco más de margen inferior */
 }
 
 .item-folio__cat {
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.9); /* Ligeramente menos brillante que el título para jerarquía */
   font-family: "Nunito Sans", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 300;
-  line-height: 1.714;
+  font-size: 1.6rem; /* <<< AUMENTADO (antes 1.4rem) */
+  font-weight: 400; /* Ligeramente más grueso si es un poco más grande */
+  line-height: 1.5; /* <<< AJUSTADO (antes 1.714) */
   margin-bottom: 0;
 }
 
+
 .item-folio__caption {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.92); /* Un poco más opaco si es necesario para legibilidad */
+  color: #FFFFFF;
+  padding: 3rem 2rem; /* Padding horizontal y vertical, ajusta según necesidad */
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  z-index: 3;
+  overflow-y: auto;
+  /* text-align: left; */ /* ELIMINADO - Flexbox y text-align en 'p' lo manejarán */
+
+  /* <<< FLEXBOX PARA CENTRAR CONTENIDO DEL CAPTION */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center;    /* Centra horizontalmente el bloque de texto */
 }
 
+.item-folio__caption p {
+    font-size: 1.7rem; /* <<< AUMENTADO (antes 1.5rem) */
+    line-height: 1.65; /* <<< AJUSTADO (antes 1.6) */
+    margin-bottom: 1.5rem; /* Un poco más de espacio entre párrafos */
+    max-width: 90%; /* Evita que el texto sea demasiado ancho en pantallas grandes */
+    text-align: center; /* <<< CENTRADO DEL TEXTO DENTRO DE CADA PÁRRAFO */
+}
+.item-folio__caption p:last-child {
+    margin-bottom: 0;
+}
 .item-folio__project-link {
   display: block;
   color: #FFFFFF;
@@ -3146,7 +3171,7 @@ html.no-csstransitions .home-content__main {
   height: 4.2rem;
   width: 4.2rem;
   text-align: center;
-  z-index: 500;
+  z-index: 500; /* Debe estar por encima de todo */
   position: absolute;
   top: 3rem;
   left: 3rem;
@@ -3155,6 +3180,8 @@ html.no-csstransitions .home-content__main {
   -webkit-transform: translate3d(0, -100%, 0);
   -ms-transform: translate3d(0, -100%, 0);
   transform: translate3d(0, -100%, 0);
+  -webkit-transition: all 0.3s ease-in-out; /* Añadida transición que faltaba */
+  transition: all 0.3s ease-in-out; /* Añadida transición que faltaba */
 }
 
 .item-folio__project-link i {
@@ -3183,16 +3210,21 @@ html.no-csstransitions .home-content__main {
 /* on hover 
  * ----------------------------------------------- */
 .item-folio:hover .item-folio__thumb a::before {
-  opacity: 1;
+  opacity: 0.6; /* Un poco de opacidad para el fondo de la imagen */
   visibility: visible;
 }
 
-.item-folio:hover .item-folio__thumb a::after {
-  opacity: 1;
-  visibility: visible;
+.item-folio:hover .item-folio__thumb a::after { /* El icono "..." */
+  /* Si no quieres que aparezca cuando el caption está activo, puedes hacer esto: */
+  /* opacity: 0; */
+  /* visibility: hidden; */
+  /* O dejarlo como estaba si quieres que aparezca sobre el caption (ajusta z-index si es necesario) */
+  opacity: 1; /* Si quieres que se vea */
+  visibility: visible; /* Si quieres que se vea */
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  z-index: 4; /* Para que esté sobre el caption si está visible */
 }
 
 .item-folio:hover .item-folio__thumb img {
@@ -3201,8 +3233,24 @@ html.no-csstransitions .home-content__main {
   transform: scale(1.05);
 }
 
-.item-folio:hover .item-folio__project-link,
+/* Modificado el hover para el texto principal y el caption */
 .item-folio:hover .item-folio__text {
+  opacity: 0; /* Ocultamos el texto principal */
+  visibility: hidden;
+  -webkit-transform: translate3d(0, 20px, 0); /* Lo movemos un poco hacia abajo al desaparecer */
+  -ms-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0);
+}
+
+.item-folio:hover .item-folio__caption {
+  opacity: 1; /* Mostramos el caption */
+  visibility: visible;
+  -webkit-transform: translateY(0); /* Lo traemos a su posición final */
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.item-folio:hover .item-folio__project-link { /* El link sigue apareciendo en hover */
   opacity: 1;
   visibility: visible;
   -webkit-transform: translate3d(0, 0, 0);
@@ -3210,16 +3258,14 @@ html.no-csstransitions .home-content__main {
   transform: translate3d(0, 0, 0);
 }
 
-/* ------------------------------------------------------------------- 
- * responsive:
- * works
- * ------------------------------------------------------------------- */
+/* Resto del CSS (responsive, s-clients, etc.) sin cambios */
+/* ... (pega aquí el resto de tu CSS) ... */
+
 @media only screen and (max-width:1000px) {
   .s-works {
     padding-top: 15rem;
     padding-bottom: 15rem;
   }
-
 }
 
 @media only screen and (max-width:800px) {
@@ -3227,37 +3273,45 @@ html.no-csstransitions .home-content__main {
   .item-folio__cat {
     font-size: 1.3rem;
   }
-
+  .item-folio__caption p {
+    font-size: 1.4rem; /* Ajusta para móviles también */
+  }
 }
 
 @media only screen and (max-width:600px) {
   .s-works {
     padding-top: 12rem;
   }
-
   .masonry-wrap {
     padding: 0 35px;
   }
-
   .masonry__brick {
     float: none;
     width: 100%;
   }
-
   .item-folio__title,
   .item-folio__cat {
     font-size: 1.4rem;
   }
-
+  .item-folio__text {
+    bottom: 2.5rem; /* Ajuste para móviles */
+    padding: 0 2rem;
+  }
+  .item-folio__caption {
+    padding: 2rem; /* Ajuste para móviles */
+  }
 }
 
 @media only screen and (max-width:400px) {
   .masonry-wrap {
     padding: 0 25px;
   }
-
 }
 
+/* ===================================================================
+ * # clients
+ * ... (resto sin cambios)
+ * ------------------------------------------------------------------- */
 
 /* ===================================================================
  * # clients

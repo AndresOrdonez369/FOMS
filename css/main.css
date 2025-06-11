@@ -4081,10 +4081,10 @@ footer a {
 /* Media Query de ejemplo para ajustes en pantallas pequeñas */
 @media (max-width: 768px) {
     :root { /* Puedes redefinir variables para móviles si lo deseas */
-        --foms-item-title-size: 1.6rem;
-        --foms-paragraph-size: 1rem;
-        --foms-list-item-size: 0.95rem;
-        --foms-section-display1-size: 2.2rem;
+        --foms-item-title-size: 2.6rem;
+        --foms-paragraph-size: 2rem;
+        --foms-list-item-size: 1.95rem;
+        --foms-section-display1-size: 2.5rem;
     }
     #nuestra-filosofia .col-block.item-service {
         margin-bottom: 2.5rem;

@@ -1,48 +1,645 @@
 <!DOCTYPE html>
-<html lang="es">
+<html class="no-js" lang="en">
 <head>
-    <!-- Metadatos Esenciales -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitio Web en Construcción</title>
 
-    <!-- Enlace a la Hoja de Estilos CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>FOMS</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <!-- Enlace a Google Fonts para la tipografía 'Lato' -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="favicon.ico">
+    <link rel="apple-touch-icon" href="faviconFOMS.png">
+    <link rel="icon" href="faviconFOMS.png" type="image/x-icon">
+
 </head>
-<body>
-    <!-- Contenedor Principal Centrado -->
-    <div class="container">
 
-        <!-- Caja de Mensaje Principal -->
-        <div class="message-box">
-            <h1 class="animated-text">
-                Nuestro sitio web está en proceso de construcción
+
+<body id="top">
+    
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-jump">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <img src="images/logo.svg" alt="Homepage">
+            </a>
+        </div> <!-- end header-logo -->
+
+        <nav class="header-nav">
+
+            <a href="#0" class="header-nav__close" title="close"><span>Cerrar</span></a>
+
+            <h3>Navegar a</h3>
+
+            <div class="header-nav__content">
+                
+                <ul class="header-nav__list">
+                    <li><a class="smoothscroll"  href="#home" title="home">Inicio</a></li>
+                    <li><a class="smoothscroll"  href="#about" title="about">¿ Qué nos hace diferentes ?</a></li>
+                    <li><a class="smoothscroll"  href="#services" title="services">¿Quiénes somos?</a></li>
+                    <li><a class="smoothscroll"  href="#works" title="works">Servicios</a></li>
+                    <li><a class="smoothscroll"  href="#contact" title="contact">Contacto</a></li>
+                </ul>
+    
+                <p>Estimulamos tu cerebro con movimiento. Estamos aquí para sacar lo mejor de ti.</p>
+    
+                <ul class="header-nav__social">
+                    <li>
+                        <a href="#0"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-behance"></i></a>
+                    </li>
+            
+                </ul>
+
+            </div> <!-- end header-nav__content -->
+
+        </nav> <!-- end header-nav -->
+
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- home
+    ================================================== -->
+<section id="home" class="s-home page-hero target-section" data-position-y="center">
+    <!-- ATRIBUTOS DE IMAGEN DE FONDO ELIMINADOS DE ARRIBA -->
+    <!-- data-parallax="scroll" data-image-src="images/logo.png" data-natural-width=3000 data-natural-height=2000 -->
+
+    <!-- VIDEO DE FONDO -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="/images/videoHero.mp4" type="video/mp4">
+        <!-- Opcional: añade más formatos para mayor compatibilidad -->
+        <!-- <source src="ruta/a/tu/video.webm" type="video/webm"> -->
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+
+    <div class="grid-overlay">
+        <div></div>
+    </div>
+
+    <div class="home-content">
+
+        <div class="row home-content__main">
+
+            <h1>
+            FOMS
             </h1>
-            <p class="animated-text delay-1">
-                Estamos dedicados a crear una plataforma digital innovadora para usted. Agradecemos su interés.
-            </p>
-            <p class="animated-text delay-2">
-                Próximamente podrá explorar todas nuestras novedades.
-            </p>
 
-            <!-- Separador Visual -->
-            <hr class="separator animated-text delay-3">
+            <h3>Estimulamos tu cerebro con movimiento.
 
-            <!-- Información de Contacto -->
-            <p class="contact-info animated-text delay-4">
-                Para consultas, puede contactarnos en: 
-                <a href="mailto:info@tuempresa.com">info@foms.com</a>
-            </p>
-        </div> <!-- Fin del .message-box -->
+                        </h3>
 
-        <!-- Pie de Página -->
-        <footer class="animated-text delay-5">
-            <p>© 2025 FOMS</p>
-        </footer>
+            <div class="home-content__video">
+                <a class="video-link" href="https://player.vimeo.com/video/117310401?color=01aef0&title=0&byline=0&portrait=0" data-lity>
+                    <span class="video-icon"></span>
+                    <span class="video-text">Mirar Video</span>
+                </a>
+            </div>
 
-    </div> <!-- Fin del .container -->
+            <div class="home-content__button">
+                <a href="#about" class="smoothscroll btn btn--primary btn--large">
+                    Más sobre nosotros
+                </a>
+                <a href="#contact" class="smoothscroll btn btn--large">
+                    Hablemos<!-- ¿Quizás quisiste decir "Hable"? -->
+                </a>
+            </div>
+
+        </div> <!-- end home-content__main -->
+
+        <div class="home-content__scroll">
+            <a href="#about" class="scroll-link smoothscroll">
+                Desplazarse
+            </a>
+        </div>
+
+    </div> <!-- end home-content -->
+
+    <ul class="home-social">
+        <li>
+            <a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
+        </li>
+        <li>
+            <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+        </li>
+        <li>
+            <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+        </li>
+    </ul> <!-- end home-social -->
+
+</section> <!-- end s-home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about target-section">
+
+        <div class="row section-header bit-narrow" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">¿ Qué nos hace diferentes ?</h3>
+                <h1 class="display-1">
+                FOMS ofrece una experiencia transformadora en estimulación cognitiva y desarrollo integral, mediante un modelo único que integra neurociencia, tecnología de punta y actividad física. 
+                </h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row bit-narrow" data-aos="fade-up">
+            <div class="col-full">
+                <p class="lead">
+            
+                    Utilizamos herramientas innovadoras como <b>realidad virtual</b>, <b>neurotecnología</b> y <b>gamificación</b>, combinadas con metodologías científicas y atención interdisciplinaria liderada por psicólogos deportivos y profesionales en salud.
+Nos diferenciamos por brindar programas personalizados para todas las etapas de la vida —desde la infancia hasta la adultez mayor— que no solo fortalecen la mente, sino también el cuerpo y las emociones, con impacto comprobado en el rendimiento personal, académico y profesional.
+
+                </p>
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div class="row bit-narrow">
+                
+            <div class="about-process process block-1-2 block-tab-full">
+
+                <div class="col-block item-process" data-aos="fade-up">
+                    <div class="item-process__text">
+                        <h4 class="item-title">Integración de tecnología avanzada</h4>
+                        <p>
+                        Utilizamos herramientas como realidad virtual, neurotecnología y gamificación, lo cual va más allá de los métodos tradicionales de estimulación cognitiva.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-block item-process" data-aos="fade-up">
+                    <div class="item-process__text">
+                        <h4 class="item-title">Enfoque interdisciplinario</h4>
+                        <p>
+                        Los programas están liderados por profesionales en psicología, psicología del deporte  del deporte y la salud, garantizando una atención que aborda tanto el desarrollo mental como físico y emocional.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-block item-process" data-aos="fade-up">
+                    <div class="item-process__text">
+                        <h4 class="item-title">Modelo único e innovador</h4>
+                        <p>
+                        FOMS no se limita a terapias convencionales. Su modelo integra salud mental, tecnología, activación física  y deporte, ofreciendo una experiencia integral y personalizada.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-block item-process" data-aos="fade-up">
+                    <div class="item-process__text">
+                        <h4 class="item-title">Atención integral y científica</h4>
+                        <p>
+                        Todos los programas parten de diagnósticos personalizados, basados en metodologías científicas y neurociencia, lo que asegura tratamientos adaptados y efectivos.
+                        </p>
+                    </div>
+                </div>
+
+            </div> <!-- end process -->
+
+        </div> <!-- end row -->
+
+    </section> <!-- end s-about -->
+
+
+    <!-- services
+    ================================================== -->
+    <section id="nuestra-filosofia" class="s-services target-section darker">
+
+    <div class="row section-header bit-narrow" data-aos="fade-up">
+        <div class="col-full">
+            <h3 class="subhead">Nuestra Filosofía</h3>
+            <h1 class="display-1">
+                Principios que definen nuestro compromiso y guían nuestras acciones diarias en FOMS
+            </h1>
+        </div>
+    </div> <!-- end section-header -->
+
+    <div class="row bit-narrow services block-tab-full">
+
+        <div class="col-block item-service" data-aos="fade-up">
+            <div class="item-service__icon">
+                <!-- Nota: Reemplaza 'icon-target' con una clase de icono real de tu librería si esta no existe -->
+                <i class="icon-target"></i> 
+            </div>
+            <div class="item-service__text">
+                <h3 class="item-title">Misión</h3>
+                <p>Promover el desarrollo integral de las personas mediante programas innovadores de estimulación cognitiva y mental, combinados con actividad física, tecnología de punta y metodologías científicas. FOMS busca fortalecer las habilidades mentales, físicas y emocionales de sus usuarios, contribuyendo a su bienestar y calidad de vida.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-block item-service" data-aos="fade-up">
+            <div class="item-service__icon">
+                <!-- Nota: Reemplaza 'icon-eye' con una clase de icono real de tu librería si esta no existe -->
+                <i class="icon-eye"></i>
+            </div>
+            <div class="item-service__text">
+                <h3 class="item-title">Visión</h3>
+                <p>Para el año 2030, FOMS será reconocido como el principal centro de estimulación cognitiva en Colombia y referente en América Latina, liderando con un modelo único que integra deporte, tecnología y salud mental para transformar vidas y fomentar una sociedad más saludable y activa.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-block item-service" data-aos="fade-up">
+            <div class="item-service__icon">
+                <!-- Nota: Reemplaza 'icon-shield' con una clase de icono real de tu librería si esta no existe.
+                     Podrías reutilizar uno de los iconos existentes como icon-star, icon-cube, etc. si prefieres. -->
+                <i class="icon-shield"></i> 
+            </div>  
+            <div class="item-service__text">
+                <h3 class="item-title">Valores Corporativos</h3>
+                <!-- Usamos una lista para los valores para una mejor semántica y estructura -->
+                <ul > 
+                    <li><strong>Innovación:</strong> Compromiso con la mejora continua y el uso de tecnología de vanguardia.</li>
+                    <li><strong>Empatía:</strong> Comprensión profunda de las necesidades de cada usuario.</li>
+                    <li><strong>Excelencia:</strong> Búsqueda constante de los más altos estándares de calidad.</li>
+                    <li><strong>Inclusión:</strong> Acceso para personas de diferentes edades y niveles sociales.</li>
+                    <li><strong>Sostenibilidad:</strong> Gestión responsable que promueve estilos de vida saludables y el cuidado del entorno.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Los siguientes bloques de servicios originales han sido eliminados 
+             ya que solo se necesitan 3 para Misión, Visión y Valores.
+             Si necesitas más, puedes añadirlos siguiendo el patrón anterior. -->
+
+    </div> <!-- end services -->
+
+</section> <!-- end s-services -->
+
+    <!-- works
+    ================================================== -->
+    <section id="works" class="s-works target-section">
+
+        <div class="row section-header has-bottom-sep narrow target-section" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Nuestros Servicios</h3>
+                <h1 class="display-1">
+                Activamos tu cuerpo y despertamos tu mente
+                </h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row masonry-wrap">
+
+            <div class="masonry">
+    
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+                            
+                        <div class="item-folio__thumb">
+                            <a href="images/fomsKids.jpg" class="thumb-link" title="FOMS Kids" data-size="1050x700">
+                                <img src="images/fomsKids.jpg" 
+                                     srcset="images/fomsKids.jpg 1x, images/fomsKids.jpg 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                FOMS Kids
+                            </h3>
+                            <p class="item-folio__cat">
+                                Niños entre 3 y 8 años que buscan estimulación cognitiva y aprendizaje a través del juego y la actividad física.
+                            </p>
+                        </div>
+
+                        <a href="" class="item-folio__project-link" title="Project link">
+                            <i class="icon-link"></i>
+                        </a>
+
+                        <div class="item-folio__caption">
+                            <p>Fortalecemos la agilidad mental a través de ejercicios cognitivos personalizados. Potenciamos sus capacidades mentales con nuestros programas de estimulación cognitiva ajustados para cada niño, niña y adolescente. Utilizamos ejercicios innovadores que desafían su cerebro de manera emocionante, nuestros facilitadores experimentados quían a los participantes a través de sesiones interesantes que no solo estimulan la función cognitiva so no también promueben el bienestar emocional.
+                                Cada Programa está personalizado para satisfacer las necesidades individuales, asegurando que todos se beneficien de una experiencia única y efectiva. Unete a nosotros y descubre como fortalecen sus mentos mientras disfrutan de un ambiente retador y estimulante.
+.</p>
+                        </div>
+
+                    </div>
+                </div> <!-- end masonry__brick -->
+    
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+                            
+                        <div class="item-folio__thumb">
+                            <a href="images/fomsJovenes.jpg" class="thumb-link" title="FOMS Winner" data-size="1050x700">
+                                <img src="images/fomsJovenes.jpg" 
+                                     srcset="images/fomsJovenes.jpg 1x, images/fomsJovenes.jpg 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                FOMS Winner
+                            </h3>
+                            <p class="item-folio__cat">
+                                Jóvenes entre 9 y 18 años, enfocados en mejorar su rendimiento físico y mental.
+                            </p>
+                        </div>
+
+                        <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                            <i class="icon-link"></i>
+                        </a>
+
+                        <div class="item-folio__caption">
+                            <p>Creemos que el movimiento mejora la función cognitiva de los atletas y nuestros programas combinan hábilmente desafíos cognitivos y motores adaptados para cada deporte y atleta. Los deportistas participan en una variedad de actividades que no solo mejoran su rendimiento mental si no tambíen fortalecen el control de emociones en situaciones de alto impacto.</p>
+                        </div>
+
+                    </div>
+                </div> <!-- end masonry__brick -->
+        
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+                            
+                        <div class="item-folio__thumb">
+                            <a href="images//fomsAtletas.jpg" class="thumb-link" title="FOMS Winner Pro" data-size="1050x700">
+                                <img src="images//fomsAtletas.jpg"
+                                     srcset="images//fomsAtletas.jpg 1x, images//fomsAtletas.jpg 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                FOMS Winner Pro
+                            </h3>
+                            <p class="item-folio__cat">
+                                Atletas mayores de 19 años con proyección a alto rendimiento.
+
+                            </p>
+                        </div>
+
+                        <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                            <i class="icon-link"></i>
+                        </a>
+
+                        <div class="item-folio__caption">
+                            <p>Creemos que el movimiento mejora la función cognitiva de los atletas y nuestros programas combinan hábilmente desafíos cognitivos y motores adaptados para cada deporte y atleta. Los deportistas participan en una variedad de actividades que no solo mejoran su rendimiento mental si no tambíen fortalecen el control de emociones en situaciones de alto impacto.</p>
+                        </div>
+
+                    </div>
+                </div> <!-- end masonry__brick -->
+        
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+                            
+                        <div class="item-folio__thumb">
+                            <a href="images/FomsAdultos.jpg" class="thumb-link" title="FOMS master" data-size="1050x700">
+                                <img src="images/FomsAdultos.jpg" 
+                                     srcset="images/FomsAdultos.jpg 1x, images/FomsAdultos.jpg 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                FOMS master
+                            </h3>
+                            <p class="item-folio__cat">
+                                Adultos y adultos mayores con o sin patologías físicas y/o cognitivas. 
+                            </p>
+                        </div>
+
+                        <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                            <i class="icon-link"></i>
+                        </a>
+
+                        <div class="item-folio__caption">
+                            <p>Fortalece tus habilidades cognitivas y mentales mientras cuidas de tu bienestar emocional. A través de sesiones interactivas, este programa ofrece actividades adaptadas para estimular la memoria, la atención, el razonamiento y la creatividad, todo en un entorno enriquecedor y motivador. Nuestros profesionales capacitados guían a los participantes en ejercicios diseñados para promover la agilidad mental y mantener la mente activa.
+
+Además, fomentamos un ambiente de compañerismo donde podrás conectar con otras personas, compartir experiencias y desarrollar un sentido de comunidad. Este programa no solo busca mantener y potenciar las capacidades cognitivas, sino también mejorar la calidad de vida y el disfrute de los momentos cotidianos.
+.</p>
+                        </div>
+
+                    </div>
+                </div> <!-- end masonry__brick -->
+    
+            </div> <!-- end masonry -->
+
+        </div> <!-- end masonry-wrap -->
+
+    </section> <!-- end s-works -->
+
+
+    <!-- clients
+    ================================================== -->
+    <section id="clients" class="s-clients target-section darker">
+
+        <div class="grid-overlay">
+            <div></div>
+        </div>
+
+        <div class="row section-header text-center narrow" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Clientes</h3>
+                <h1 class="display-1">¿ Con quién trabajamos ?</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row clients-wrap" data-aos="fade-up">
+            <div class="col-twelve">
+                <ul class="clients">
+                    <li><a href="#0">Sena</a></li>
+                    <li><a href="#0">Universidad Mariana</a></li>
+                    <li><a href="#0">Universidad de Nariño</a></li>
+                    <li><a href="#0">San Rafael</a></li>
+                    <li><a href="#0">San Pedro</a></li>
+                    <li><a href="#0">Fondo Emprender</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </section> <!-- end s-clients -->
+
+
+    <!-- testimonies
+    ================================================== -->
+    <section class="s-testimonials">
+
+        <div class="testimonials__icon" data-aos="fade-up"></div>
+
+        <div class="row testimonials narrow">
+
+            <div class="col-full testimonials__slider" data-aos="fade-up">
+
+                <div class="testimonials__slide">
+                    <p>Qui ipsam temporibus quisquam vel. Maiores eos cumque distinctio nam accusantium ipsum. 
+                    Laudantium quia consequatur molestias delectus culpa facere hic dolores aperiam. Accusantium quos qui praesentium corpori.</p>
+                    <div class="testimonials__author">
+                        Tim Cook
+                        <span>CEO, Apple</span>
+                    </div>
+                </div> <!-- end testimonials__slide -->
+
+                <div class="testimonials__slide">
+                    <p>Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
+                    Nisi eaque consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui ipsam temporibus quisquam vel.</p>
+                    <div class="testimonials__author">
+                        Sundar Pichai
+                        <span>CEO, Google</span>
+                    </div>
+                </div> <!-- end testimonials__slide -->
+
+                <div class="testimonials__slide">
+                    <p>Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  
+                    Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.</p>
+                    <div class="testimonials__author">
+                        Satya Nadella
+                        <span>CEO, Microsoft</span>
+                    </div>
+                </div> <!-- end testimonials__slide -->
+                
+            </div> <!-- end testimonials__slider -->
+
+        </div> <!-- end testimonials -->
+
+    </section> <!-- end s-testimonials -->
+
+
+    <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact target-section">
+
+            <div class="grid-overlay">
+                <div></div>
+            </div>
+
+        <div class="row section-header narrow" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Estemos en contaco</h3>
+                <h1 class="display-1">Estamos para apoyarte <br> cuentanos cómo</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row contact-main" data-aos="fade-up">
+            <div class="col-full">
+                <p class="contact-email">
+                    <a href="mailto:#0">info@foms.com.co</a>
+                </p>
+                <p class="contact-address">
+                Calle 11a No 29-54  <br>
+                San Ignacio, Nariño, Colombia
+                </p>
+                <p class="contact-numbers">
+                &nbsp; +57 (312) 374 1088  
+                </p>
+
+                <ul class="contact-social">
+                    <li>
+                        <a href="#0"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-behance"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-dribbble"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="row">
+            <div class="col-full ss-copyright">
+                <span>FOMS 2025</span> 
+                <span>Diseñado por <a href="https://www.styleshout.com/">Realidades X</a></span>
+            </div>
+        </div>
+
+        <div class="ss-go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top"> Volver arriba</a>
+        </div>
+    </footer>
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
-</html>

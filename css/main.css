@@ -3100,7 +3100,7 @@ html.no-csstransitions .home-content__main {
   text-align: center; /* <<< CENTRADO HORIZONTAL DEL CONTENIDO */
   -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
-  background-color: #0d404781;
+  background-color: #1c4087d3;
 }
 
 
@@ -3906,7 +3906,7 @@ footer a {
 
 .ss-go-top a {
   color: #FFFFFF;
-  background-color: #351b48;
+  background-color: #A8E6CF;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -3945,7 +3945,7 @@ footer a {
 
 .ss-go-top a:hover,
 .ss-go-top a:focus {
-  background-color: #2d173d;
+  background-color: #FF7043;
 }
 
 /* ------------------------------------------------------------------- 

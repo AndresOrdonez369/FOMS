@@ -2078,21 +2078,24 @@ a.pswp__share--download:hover {
   line-height: 1.333;
   margin: 0 0 .6rem;
   color: #FFFFFF;
+  background-color: #1c4087 ;
 }
 
 .pswp__caption small {
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgb(255, 255, 255);
+  
 }
 
 .pswp__caption__center {
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
-  font-size: 13px;
+  font-size: 2rem;
   padding: 10px;
-  line-height: 20px;
-  color: rgba(255, 255, 255, 0.5);
+  line-height: 30px;
+  color: rgb(255, 255, 255);
+  background-color: #1c4087 ;
 }
 
 .pswp__caption--empty {

@@ -3308,10 +3308,6 @@ html.no-csstransitions .home-content__main {
   }
 }
 
-/* ===================================================================
- * # clients
- * ... (resto sin cambios)
- * ------------------------------------------------------------------- */
 
 /* ===================================================================
  * # clients
@@ -3680,7 +3676,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .s-contact .subhead {
-  color: #2a1538;
+  color: #ffffff;
 }
 
 .s-contact .section-header,
@@ -3906,10 +3902,10 @@ footer a {
 
 .ss-go-top a {
   color: #FFFFFF;
-  background-color: #A8E6CF;
+  background-color: #7db8a2;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: .3rem;

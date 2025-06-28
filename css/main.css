@@ -4140,3 +4140,33 @@ footer a {
         margin-bottom: 2.5rem;
     }
 }
+/* ===================================================================
+ * 22. footer styles - VERSIÓN EN COLUMNA
+ *
+ * ------------------------------------------------------------------- */
+
+/* Contenedor principal que organiza el logo y el texto */
+.footer-content {
+  display: flex;
+  flex-direction: column; /* ¡Este es el cambio clave! Apila los elementos verticalmente */
+  align-items: center;    /* Centra el logo y el texto horizontalmente */
+  justify-content: center;
+  gap: 1.5rem;            /* Espacio vertical entre el logo y el texto */
+  text-align: center;     /* Centra todo el texto por defecto */
+  padding-bottom: 3rem;   /* Espacio antes del botón "Volver arriba" */
+}
+
+/* Estilos para el contenedor del logo */
+.footer-logo img {
+  max-height: 55px; /* Puedes ajustar la altura del logo si lo necesitas */
+  width: auto;
+}
+
+/* Estilos para el texto del copyright */
+.footer-content .ss-copyright {
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Una línea de texto sobre la otra */
+  gap: 0.5rem;            /* Espacio entre las dos líneas de texto */
+  line-height: 1.5;       /* Mejora la legibilidad del texto */
+}
